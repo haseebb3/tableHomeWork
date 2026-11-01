@@ -1,0 +1,325 @@
+<h1 class="bg-primary text-center p-3 text-white">Homework of table and cards</h1>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4 mb-3" *ngFor="let ai of aiArr1">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h2>{{ai.topic}}</h2>
+                </div>
+                <div class="card-body">
+                    {{ai.details}}
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button mat-mini-fab color="primary" aria-label="Example icon button with a filter list icon">
+                        <mat-icon>edit_square</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <hr color="white" style="height: 3px;">
+        </div>
+
+        <div class="col-md-12">
+            <table class="table table-bordered bg-white">
+                <thead class=" bg-primary text-white">
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let emp of employees; let i = index">
+                        <td>{{i + 1}}</td>
+                        <td>{{emp.empId}}</td>
+                        <td>{{emp.empName}}</td>
+                        <td>{{emp.designation}}</td>
+                        <td>{{emp.department}}</td>
+                        <td>{{emp.email}}</td>
+                        <td>{{emp.contact}}</td>
+                        <td class="text-center">
+                            <button mat-mini-fab class="bg-primary text-white"
+                                aria-label="Example icon button with a plus one icon">
+                                <mat-icon>edit_square</mat-icon>
+                            </button>
+                        </td>
+                        <td class="text-center">
+                            <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-12">
+            <hr color="yellow" style="height: 3px;">
+        </div>
+
+        <div class="col-md-4 mb-3" *ngFor="let m of math">
+            <div class="card h-100 ">
+                <div class="card-header">
+                    <h2>{{m.concept}}</h2>
+                </div>
+                <div class="card-body">
+                    {{m.explain}}
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button mat-mini-fab color="accent" aria-label="Example icon button with a filter list icon">
+                        <mat-icon>edit_square</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <hr color="white" style="height: 3px;">
+        </div>
+
+        <div class="col-md-12">
+            <table class="table table-bordered bg-white">
+                <thead class=" bg-info text-white">
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Year</th>
+                        <th>Percentage</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let std of students; index as i">
+                        <td>{{i + 1}}</td>
+                        <td>{{std.rollNo}}</td>
+                        <td>{{std.name}}</td>
+                        <td>{{std.course}}</td>
+                        <td>{{std.year}}</td>
+                        <td>{{std.percentage}}</td>
+                        <td>{{std.email}}</td>
+                        <td>{{std.contact}}</td>
+                        <td class="text-center">
+                            <button mat-mini-fab class="bg-info text-white"
+                                aria-label="Example icon button with a plus one icon">
+                                <mat-icon>edit_square</mat-icon>
+                            </button>
+                        </td>
+                        <td class="text-center">
+                            <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-12">
+            <hr color="red" style="height: 3px;">
+        </div>
+
+        <div class="col-md-4 mb-3" *ngFor="let robot of robotics">
+            <div class="card h-100 ">
+                <div class="card-header">
+                    <h2>{{robot.module}}</h2>
+                </div>
+                <div class="card-body">
+                    {{robot.summary}}
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button class="bg-info text-white" mat-mini-fab
+                        aria-label="Example icon button with a filter list icon">
+                        <mat-icon>edit_square</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <hr color="white" style="height: 3px;">
+        </div>
+
+        <div class="col-md-12">
+            <table class="table table-bordered bg-white">
+                <thead class=" bg-danger text-white">
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Catagory</th>
+                        <th>Price</th>
+                        <th>Brand</th>
+                        <th>IsAvailable?</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prod of products; index as i">
+                        <td>{{i + 1}}</td>
+                        <td>{{prod.prodId}}</td>
+                        <td>{{prod.prodName}}</td>
+                        <td>{{prod.category}}</td>
+                        <td>{{prod.price}}</td>
+                        <td>{{prod.brand}}</td>
+                        <td [ngClass]="prod.isAvailable ? 'text-primary' : 'text-danger'">{{prod.isAvailable ? "YES" :
+                            "NO"}}</td>
+                        <td class="text-center">
+                            <button mat-mini-fab class="bg-info text-white"
+                                aria-label="Example icon button with a plus one icon">
+                                <mat-icon>edit_square</mat-icon>
+                            </button>
+                        </td>
+                        <td class="text-center">
+                            <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="col-md-12">
+            <hr color="white" style="height: 3px;">
+        </div>
+
+        <div class="col-md-4 mb-3" *ngFor="let business of businessArr">
+            <div class="card h-100 ">
+                <div class="card-header">
+                    <h2>{{business.topicName}}</h2>
+                </div>
+                <div class="card-body">
+                    {{business.description}}
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button mat-mini-fab class="bg-dark text-white"
+                        aria-label="Example icon button with a filter list icon">
+                        <mat-icon>edit_square</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <hr color="white" style="height: 3px;">
+        </div>
+
+        <div class="col-md-12">
+            <h1 class="bg-info text-center p-2  mb-0 text-white">Course Info with <i>Conditional rendering of "isActive" field</i></h1>
+            <table class="table table-bordered bg-white">
+                <thead class=" bg-dark text-white">
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Course Id</th>
+                        <th>Name</th>
+                        <th>Duration</th>
+                        <th>Fees</th>
+                        <th>Mode</th>
+                        <th>IsActive?</th>
+                        <th>Trainer</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cor of courses; index as i">
+                        <td>{{i + 1}}</td>
+                        <td>{{cor.courseId}}</td>
+                        <td>{{cor.courseName}}</td>
+                        <td>{{cor.duration}}</td>
+                        <td>{{cor.fees}}</td>
+                        <td>{{cor.mode}}</td>
+                        <td [ngClass]="cor.isActive ? 'text-primary' : 'text-danger'">{{cor.isActive ? "Yes" : "No"}}</td>
+                        <td>{{cor.trainer}}</td>
+                        <td class="text-center">
+                            <button mat-mini-fab class="bg-dark text-white"
+                                aria-label="Example icon button with a plus one icon">
+                                <mat-icon>edit_square</mat-icon>
+                            </button>
+                        </td>
+                        <td class="text-center">
+                            <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-12">
+            <hr color="orange" style="height: 3px;">
+        </div>
+
+        <div class="col-md-4 mb-3" *ngFor="let geo of geography">
+            <div class="card h-100 ">
+                <div class="card-header">
+                    <h2>{{geo.subject}}</h2>
+                </div>
+                <div class="card-body">
+                    {{geo.info}}
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button mat-mini-fab class="bg-dark text-white"
+                        aria-label="Example icon button with a filter list icon">
+                        <mat-icon>edit_square</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <hr color="yellow" style="height: 3px;">
+        </div>
+
+        <div class="col-md-4 mb-3" *ngFor="let b of biology">
+            <div class="card h-100 ">
+                <div class="card-header">
+                    <h2>{{b.section}}</h2>
+                </div>
+                <div class="card-body">
+                    {{b.detail}}
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button mat-mini-fab class="bg-dark text-white"
+                        aria-label="Example icon button with a filter list icon">
+                        <mat-icon>edit_square</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
