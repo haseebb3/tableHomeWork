@@ -1,6 +1,7 @@
 
 import { AiArr, BusinessArr, Math, Robotics, Geography, Psychology, BiologyArr } from "../models/studentsModel";
 
+
 export const aiArr:  AiArr[] = [
   { topic: "AI Fundamentals", details: "Understand the core ideas behind Artificial Intelligence." },
   { topic: "Neural Networks", details: "Learn how interconnected nodes mimic human brains." },

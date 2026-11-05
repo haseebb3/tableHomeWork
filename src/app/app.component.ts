@@ -22,4 +22,8 @@ export class AppComponent {
   students = studentArr;
   products = productArr;
   courses = courseArr;
+
+  flag = !true;
 }
+
+
